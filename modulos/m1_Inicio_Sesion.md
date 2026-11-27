@@ -38,7 +38,7 @@ Proveer una arquitectura robusta, intuitiva y centralizada para la autenticació
 | RF01 | Captura de Credenciales | El sistema debe proveer una interfaz para capturar el identificador (matrícula o correo institucional) y la contraseña del usuario. |
 | RF02 | Validación y Cotejo Criptográfico | El sistema debe validar contra el repositorio de datos que las credenciales coincidan con el hash almacenado y que la cuenta esté activa. |
 | RF03 | Resolución de Rol y Enrutamiento | El sistema debe identificar el rol asociado al usuario autenticado (Alumno, Docente, Administrador) y redireccionar al panel que le corresponda. |
-| RF04 | Recuperación de Contraseña | El sistema debe emitir un token temporal de un solo uso con caducidad definida para el restablecimiento de contraseña vía correo. |
+| RF04 | Recuperación de Contraseña | El sistema debe emitir un token temporal y de un solo uso para restablecer la contraseña mediante el correo institucional. El token tendrá una vigencia de 15 minutos, controlada por el servidor mediante una fecha de expiración. Si el token ha expirado o ya fue utilizado, el sistema rechazará la solicitud. |
 | RF05 | Cierre Seguro de Sesión | El sistema debe destruir la sesión activa y revocar el token en almacenamiento cliente cuando el usuario elija salir del portal. |
 | RF06 | Bloqueo por Fuerza Bruta | El sistema debe suspender temporalmente el acceso por 15 minutos tras 5 intentos fallidos consecutivos desde la misma cuenta o IP. |
 
